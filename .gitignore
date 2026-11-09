@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+out-sample/
+*.tsbuildinfo
+next-env.d.ts
+.env*
+.netlify/
+
+# Original CVs contain personal data: never commit them.
+templates/source/*.docx
+templates/source/*.pdf

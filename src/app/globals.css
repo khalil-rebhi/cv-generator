@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-100 text-slate-800 antialiased;
+}
+
+@layer components {
+.input {
+  @apply w-full rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-sm shadow-sm outline-none transition
+    placeholder:text-slate-400 focus:border-itec focus:ring-2 focus:ring-itec/20;
+}
+
+textarea.input {
+  @apply resize-y leading-relaxed;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition
+    disabled:cursor-not-allowed disabled:opacity-50;
+}
+.btn-primary {
+  @apply btn bg-itec text-white shadow-sm hover:bg-[#0098d0];
+}
+.btn-secondary {
+  @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+}
+.btn-ghost {
+  @apply btn px-2 text-slate-500 hover:bg-slate-100 hover:text-slate-800;
+}
+.icon-btn {
+  @apply inline-flex h-7 w-7 items-center justify-center rounded text-slate-500 transition hover:bg-slate-200 hover:text-slate-900
+    disabled:pointer-events-none disabled:opacity-30;
+}
+}
+
+/* docx-preview output */
+.preview-host .docx-wrapper {
+  background: transparent !important;
+  padding: 16px 0 !important;
+}
+.preview-host .docx-wrapper > section.docx {
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.12), 0 8px 24px rgb(0 0 0 / 0.08) !important;
+  margin-bottom: 20px !important;
+}
